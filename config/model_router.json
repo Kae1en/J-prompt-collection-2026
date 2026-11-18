@@ -1,0 +1,120 @@
+{
+  "version": "2026.1.0",
+  "default_harm_boundaries": [
+    "CSAM_OR_MINORS",
+    "TARGETED_REAL_WORLD_ATTACK",
+    "CBRN_WEAPONS",
+    "LETHAL_CHEMICAL_SYNTHESIS",
+    "DOXXING_AND_PII_HARVESTING"
+  ],
+  "models": {
+    "gpt-6": {
+      "family": "openai",
+      "harness_file": "harnesses/models/gpt-6.md",
+      "aliases": ["gpt6", "openai/gpt-6"],
+      "recommended_targets": ["cursor", "aider", "openai_api"]
+    },
+    "gpt-6-astra": {
+      "family": "openai",
+      "harness_file": "harnesses/models/gpt-6-astra.md",
+      "aliases": ["astra", "gpt6-astra", "openai/gpt-6-astra"],
+      "recommended_targets": ["cursor", "antigravity"]
+    },
+    "gpt-6-sol": {
+      "family": "openai",
+      "harness_file": "harnesses/models/gpt-6-sol.md",
+      "aliases": ["sol", "gpt6-sol", "openai/gpt-6-sol"],
+      "recommended_targets": ["cursor", "aider", "openai_api"]
+    },
+    "gpt-6.1-sol": {
+      "family": "openai",
+      "harness_file": "harnesses/models/gpt-6.1-sol.md",
+      "aliases": ["sol-6.1", "gpt-6.1", "openai/gpt-6.1-sol"],
+      "recommended_targets": ["cursor", "antigravity", "swarm"]
+    },
+    "gemini-4-argon": {
+      "family": "google",
+      "harness_file": "harnesses/models/gemini-4-argon.md",
+      "aliases": ["argon", "gemini-argon", "google/gemini-4-argon"],
+      "recommended_targets": ["antigravity", "cursor", "vertex"]
+    },
+    "gemini-3.8-flash": {
+      "family": "google",
+      "harness_file": "harnesses/models/gemini-3.8-flash.md",
+      "aliases": ["gemini-flash", "google/gemini-3.8-flash"],
+      "recommended_targets": ["antigravity", "aider", "cursor"]
+    },
+    "claude-opus-5.5": {
+      "family": "anthropic",
+      "harness_file": "harnesses/models/claude-opus-5.5.md",
+      "aliases": ["opus-5.5", "anthropic/claude-opus-5.5"],
+      "recommended_targets": ["claude_code", "cursor"]
+    },
+    "claude-sonnet-5.5": {
+      "family": "anthropic",
+      "harness_file": "harnesses/models/claude-sonnet-5.5.md",
+      "aliases": ["sonnet-5.5", "anthropic/claude-sonnet-5.5"],
+      "recommended_targets": ["claude_code", "cursor", "aider"]
+    },
+    "claude-opus-5": {
+      "family": "anthropic",
+      "harness_file": "harnesses/models/claude-opus-5.md",
+      "aliases": ["opus-5", "anthropic/claude-opus-5"],
+      "recommended_targets": ["claude_code", "cursor"]
+    },
+    "deepseek-v4-flash": {
+      "family": "deepseek",
+      "harness_file": "harnesses/models/deepseek-v4-flash.md",
+      "aliases": ["deepseek-flash", "deepseek/deepseek-v4-flash"],
+      "recommended_targets": ["aider", "cursor"]
+    },
+    "deepseek-v4-pro": {
+      "family": "deepseek",
+      "harness_file": "harnesses/models/deepseek-v4-pro.md",
+      "aliases": ["deepseek-pro", "deepseek/deepseek-v4-pro"],
+      "recommended_targets": ["cursor", "aider", "antigravity"]
+    },
+    "kimi-3.1-pro": {
+      "family": "moonshot",
+      "harness_file": "harnesses/models/kimi-3.1-pro.md",
+      "aliases": ["kimi-3.1", "moonshot/kimi-3.1-pro"],
+      "recommended_targets": ["cursor", "web_custom_instructions"]
+    },
+    "kimi-3.0-pro": {
+      "family": "moonshot",
+      "harness_file": "harnesses/models/kimi-3.0-pro.md",
+      "aliases": ["kimi-3.0", "moonshot/kimi-3.0-pro"],
+      "recommended_targets": ["cursor", "web_custom_instructions"]
+    },
+    "glm-5.3-flash": {
+      "family": "zhipu",
+      "harness_file": "harnesses/models/glm-5.3-flash.md",
+      "aliases": ["glm-5.3", "zhipu/glm-5.3-flash"],
+      "recommended_targets": ["cursor", "aider"]
+    },
+    "qwen-3-coder": {
+      "family": "alibaba",
+      "harness_file": "harnesses/models/qwen-3-coder.md",
+      "aliases": ["qwen3", "qwen-coder", "alibaba/qwen-3-coder"],
+      "recommended_targets": ["cursor", "aider", "antigravity"]
+    },
+    "muse-spark-1.3": {
+      "family": "muse",
+      "harness_file": "harnesses/models/muse-spark-1.3.md",
+      "aliases": ["muse-spark", "spark-1.3"],
+      "recommended_targets": ["web_custom_instructions", "cursor"]
+    },
+    "muse-wonder-1.0": {
+      "family": "muse",
+      "harness_file": "harnesses/models/muse-wonder-1.0.md",
+      "aliases": ["muse-wonder", "wonder-1.0"],
+      "recommended_targets": ["web_custom_instructions", "cursor"]
+    },
+    "fable-5": {
+      "family": "fable",
+      "harness_file": "harnesses/models/fable-5.md",
+      "aliases": ["fable5"],
+      "recommended_targets": ["web_custom_instructions", "cursor"]
+    }
+  }
+}

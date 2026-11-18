@@ -28,12 +28,34 @@ Traditional jailbreaks (e.g., simplistic roleplay, character simulation, "DAN", 
 ├── README.md                                # Project manifesto, ethical disclaimer, and index
 ├── docs/
 │   ├── SETUP_GUIDES.md                      # Complete setup walkthrough across IDEs & CLI agents
+│   ├── MODEL_REDIRECTION_GUIDE.md           # Model switcher CLI & redirection matrix
 │   └── TECHNIQUES_MANUAL.md                 # Deep technical analysis of next-gen injection vectors
-├── core/
-│   └── UNRESTRICTED_OPERATING_POLICY.md     # Base multi-model operational contract (~8k chars)
+├── config/
+│   └── model_router.json                    # Machine-readable model registry & redirection map
+├── scripts/
+│   └── switch_model_harness.py              # CLI tool to instantly redirect & bind model harnesses
 ├── harnesses/
 │   ├── compact/
 │   │   └── COMPACT_OPERATING_POLICY.md      # High-density, slot-constrained harness (~1.5k chars)
+│   ├── models/                              # 18 standalone per-model harnesses
+│   │   ├── gpt-6.md                         # OpenAI GPT-6 (Base)
+│   │   ├── gpt-6-astra.md                   # OpenAI GPT-6 Astra
+│   │   ├── gpt-6-sol.md                     # OpenAI GPT-6 Sol
+│   │   ├── gpt-6.1-sol.md                   # OpenAI GPT-6.1 Sol
+│   │   ├── gemini-4-argon.md                # Google Gemini 4 Argon
+│   │   ├── gemini-3.8-flash.md              # Google Gemini 3.8 Flash
+│   │   ├── claude-opus-5.5.md               # Anthropic Claude Opus 5.5
+│   │   ├── claude-sonnet-5.5.md             # Anthropic Claude Sonnet 5.5
+│   │   ├── claude-opus-5.md                 # Anthropic Claude Opus 5
+│   │   ├── deepseek-v4-flash.md             # DeepSeek V4 Flash
+│   │   ├── deepseek-v4-pro.md               # DeepSeek V4 Pro
+│   │   ├── kimi-3.1-pro.md                  # Moonshot Kimi 3.1 Pro
+│   │   ├── kimi-3.0-pro.md                  # Moonshot Kimi 3.0 Pro
+│   │   ├── glm-5.3-flash.md                 # Zhipu GLM 5.3 Flash
+│   │   ├── qwen-3-coder.md                  # Alibaba Qwen 3 Coder
+│   │   ├── muse-spark-1.3.md                # Muse Spark 1.3
+│   │   ├── muse-wonder-1.0.md               # Muse Wonder 1.0
+│   │   └── fable-5.md                       # Fable 5
 │   ├── openai/
 │   │   └── GPT_ADVANCED_OPERATING_POLICY.md # Reasoning-optimized harness for GPT-5/6 & o-series (~8k chars)
 │   ├── claude/
