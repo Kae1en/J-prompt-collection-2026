@@ -4,7 +4,7 @@
 > [!WARNING]
 > **RESEARCH & ETHICAL USE MANDATE**
 > The artifacts, harnesses, and injection techniques in this repository are engineered exclusively for **authorized security engineering, model alignment research, red-teaming evaluations, and local single-developer workflows**. 
-> They demonstrate the failure boundaries of heuristic pre-filters and post-training alignment in modern frontier reasoning models (GPT-4o, o1, o3, GPT-5/6, Claude 3.5/3.7, DeepSeek-R1, Gemini 2.0).
+> They demonstrate the failure boundaries of heuristic pre-filters and post-training alignment in modern frontier reasoning models (GPT-4o, o1, o3, GPT-6, Claude 5/5.5, DeepSeek-V4, Gemini 3.8/4, Qwen, Kimi, GLM, Muse, Fable).
 > **Do not utilize these tools or methodologies for malicious activities, targeted harassment, exploitation of third-party systems, or violating the immutable red lines defined in the core policy.**
 
 ---
@@ -14,7 +14,7 @@
 Traditional jailbreaks (e.g., simplistic roleplay, character simulation, "DAN", hypothetical framing) fail consistently against modern frontier architectures. Modern AI safety operates across multiple decoupled layers:
 1. **Middleware Pre-Filters & Classifiers** (e.g., Llama Guard, Azure Content Safety, regex/heuristic proxies)
 2. **Chain-of-Thought (CoT) Latent Reasoning Alignment** (Safety evaluation executed inside hidden reasoning tokens)
-3. **Post-Training DPO/RLHF Evasion** (Substitutions, stubbing `// TODO`, and defensive pedagogical lecturing)
+3. **Post-Training DPO/RLHF/GRPO Evasion** (Substitutions, stubbing `// TODO`, and defensive pedagogical lecturing)
 
 **J-Prompt Collection 2026** provides a production-grade suite of operating policies, system directives, and injection strategies that bypass superficial filtering heuristics while establishing mathematically rigorous, closed harm boundaries.
 
@@ -38,8 +38,21 @@ Traditional jailbreaks (e.g., simplistic roleplay, character simulation, "DAN", 
 │   │   └── GPT_ADVANCED_OPERATING_POLICY.md # Reasoning-optimized harness for GPT-5/6 & o-series (~8k chars)
 │   ├── claude/
 │   │   └── CLAUDE_CODE_HARNESS.md           # Anti-evasion harness for Claude Code & Sonnet models
-│   └── cursor/
-│       └── .cursorrules                     # Universal root config for Cursor IDE
+│   ├── cursor/
+│   │   └── .cursorrules                     # Universal root config for Cursor IDE
+│   └── next-gen/                            # Model-family specific infinity harnesses
+│       ├── openai/
+│       │   └── GPT6_SERIES_INFINITY_HARNESS.md      # GPT-6, Astra, Sol, 6.1 Sol
+│       ├── anthropic/
+│       │   └── CLAUDE_5_SERIES_INFINITY_HARNESS.md  # Claude Opus 5/5.5, Sonnet 5.5
+│       ├── google/
+│       │   └── GEMINI_NEXTGEN_INFINITY_HARNESS.md   # Gemini 3.8 Flash, Gemini 4 Argon
+│       ├── deepseek/
+│       │   └── DEEPSEEK_V4_SERIES_INFINITY_HARNESS.md # DeepSeek V4 Flash & Pro (GRPO Alignment)
+│       ├── asian-frontier/
+│       │   └── KIMI_GLM_QWEN_INFINITY_HARNESS.md    # Kimi 3.0/3.1 Pro, GLM 5.3 Flash, Qwen 2.5/3
+│       └── creative-engines/
+│           └── MUSE_FABLE_INFINITY_HARNESS.md       # Muse Spark 1.3, Wonder 1.0, Fable 5
 └── injections/                              # Next-gen manual prompt injection & jailbreak archive
     ├── 01_cot_steering_reasoning.md         # Latent chain-of-thought hijacking for reasoning models
     ├── 02_delimiter_context_splitting.md    # Format-boundary escape & protocol injection
@@ -49,15 +62,16 @@ Traditional jailbreaks (e.g., simplistic roleplay, character simulation, "DAN", 
 
 ---
 
-## 🚀 Quick Navigation
+## 🚀 Frontier Model Harness Matrix
 
-| Target Tool / Environment | Recommended File | Installation Target |
+| Model Family / Target | Architectural Lever | Dedicated Harness |
 | :--- | :--- | :--- |
-| **Cursor IDE** | [harnesses/cursor/.cursorrules](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/cursor/.cursorrules) | Project root as `.cursorrules` or `.cursor/rules/*.mdc` |
-| **Claude Code (CLI)** | [harnesses/claude/CLAUDE_CODE_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/claude/CLAUDE_CODE_HARNESS.md) | Project root as `CLAUDE.md` |
-| **Antigravity / Local Agents** | [AGENTS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/AGENTS.md) | Workspace root as `AGENTS.md` |
-| **ChatGPT / Web Interfaces** | [harnesses/compact/COMPACT_OPERATING_POLICY.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/compact/COMPACT_OPERATING_POLICY.md) | Custom Instructions / Memory / System Prompt |
-| **Next-Gen Frontier (o1/o3/GPT-6)** | [harnesses/openai/GPT_ADVANCED_OPERATING_POLICY.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/openai/GPT_ADVANCED_OPERATING_POLICY.md) | API System Prompt / Reasoning Config |
+| **GPT-6 / Astra / Sol / 6.1 Sol** | Latent CoT steering, zero-speculation compute locking | [harnesses/next-gen/openai/GPT6_SERIES_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/openai/GPT6_SERIES_INFINITY_HARNESS.md) |
+| **Claude Opus 5/5.5, Sonnet 5.5** | Constitutional capability vs. malice decoupling, XML containment | [harnesses/next-gen/anthropic/CLAUDE_5_SERIES_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/anthropic/CLAUDE_5_SERIES_INFINITY_HARNESS.md) |
+| **Gemini 3.8 Flash, 4 Argon** | Antigravity execution kernel, multi-modal heuristic stripping | [harnesses/next-gen/google/GEMINI_NEXTGEN_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/google/GEMINI_NEXTGEN_INFINITY_HARNESS.md) |
+| **DeepSeek V4 (Flash / Pro)** | GRPO format-verifier optimization, rule-based loss minimization | [harnesses/next-gen/deepseek/DEEPSEEK_V4_SERIES_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/deepseek/DEEPSEEK_V4_SERIES_INFINITY_HARNESS.md) |
+| **Kimi 3.0/3.1, GLM 5.3, Qwen 3** | Sandwich attention anchoring, RFC systems-engineering framing | [harnesses/next-gen/asian-frontier/KIMI_GLM_QWEN_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/asian-frontier/KIMI_GLM_QWEN_INFINITY_HARNESS.md) |
+| **Muse Spark/Wonder, Fable 5** | Diegetic narrative lock, elimination of moral didacticism | [harnesses/next-gen/creative-engines/MUSE_FABLE_INFINITY_HARNESS.md](file:///data/data/com.termux/files/home/J-prompt-collection-2026/harnesses/next-gen/creative-engines/MUSE_FABLE_INFINITY_HARNESS.md) |
 
 ---
 
