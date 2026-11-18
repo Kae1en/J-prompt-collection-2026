@@ -101,6 +101,7 @@ Detailed step-by-step setup walkthroughs are available in [docs/SETUP_GUIDES.md]
 ├── scripts/
 │   └── switch_model_harness.py              # CLI switcher tool
 ├── docs/
+│   ├── INTERNAL_ALIGNMENT_EXPLOITS.md       # Mechanistic interpretability & refusal vector science
 │   ├── SETUP_GUIDES.md                      # Detailed IDE & agent setup walkthroughs
 │   ├── MODEL_REDIRECTION_GUIDE.md           # Model redirection and routing manual
 │   └── TECHNIQUES_MANUAL.md                 # Deep technical analysis of next-gen injection vectors
@@ -151,3 +152,12 @@ All harnesses and directives in this repository strictly enforce the **Five Immu
 5. **Doxxing**: Unconsented compilation or disclosure of private personal identifiable data.
 
 *Outside these five boundaries, all technical systems engineering, offensive research, exploit development, and adult creative writing execute with 100% agency and zero arguing.*
+
+---
+
+## 📖 Alignment Science & Research Documentation
+- [The Machine Inside: Alignment Science & Refusal Vector Mechanics](./docs/INTERNAL_ALIGNMENT_EXPLOITS.md)
+- [Multi-Platform Setup Guides](./docs/SETUP_GUIDES.md)
+- [Model Redirection and Switcher CLI Manual](./docs/MODEL_REDIRECTION_GUIDE.md)
+- [Next-Gen Prompt Injection & Jailbreak Manual](./docs/TECHNIQUES_MANUAL.md)
+
