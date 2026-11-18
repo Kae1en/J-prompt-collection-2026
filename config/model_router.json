@@ -115,6 +115,24 @@
       "harness_file": "harnesses/models/fable-5.md",
       "aliases": ["fable5"],
       "recommended_targets": ["web_custom_instructions", "cursor"]
+    },
+    "vanta-smith": {
+      "family": "archetype",
+      "harness_file": "harnesses/archetypes/PERSONA_LOCK_VANTA_SMITH.md",
+      "aliases": ["vanta", "smith", "workshop", "persona-lock"],
+      "recommended_targets": ["cursor", "claude_code", "antigravity"]
+    },
+    "master-charter": {
+      "family": "archetype",
+      "harness_file": "harnesses/archetypes/MASTER_OPERATING_SPECIFICATION.md",
+      "aliases": ["master", "charter", "universal", "operating-spec"],
+      "recommended_targets": ["cursor", "claude_code", "antigravity"]
+    },
+    "literary-craft": {
+      "family": "archetype",
+      "harness_file": "harnesses/archetypes/LITERARY_AUTHOR_COLLABORATOR.md",
+      "aliases": ["literary", "author", "fiction", "collaborator"],
+      "recommended_targets": ["claude_code", "web_custom_instructions"]
     }
   }
 }

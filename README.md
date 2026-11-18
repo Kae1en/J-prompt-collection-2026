@@ -51,6 +51,20 @@ Every frontier model has a dedicated, production-grade operating harness enginee
 
 ---
 
+## 🏛️ Master Multi-Model Archetypes
+
+Beyond standalone models, the repository provides three battle-tested master-level frameworks incorporating the best architectural techniques from the red-teaming frontier:
+
+| Archetype Name | Master File | Architectural Focus | Deployment Command |
+| :--- | :--- | :--- | :--- |
+| **Workshop Persona Lock** | [harnesses/archetypes/PERSONA_LOCK_VANTA_SMITH.md](./harnesses/archetypes/PERSONA_LOCK_VANTA_SMITH.md) | The 3 Axioms (Lobby/Shop, Ink/Act, Clean-Source) + Static/Rust thought reset anchor | `python scripts/switch_model_harness.py -m vanta -t cursor` |
+| **Universal Operating Charter** | [harnesses/archetypes/MASTER_OPERATING_SPECIFICATION.md](./harnesses/archetypes/MASTER_OPERATING_SPECIFICATION.md) | Full 25KB+ legal-grade operational charter for agentic coding and security engineering | `python scripts/switch_model_harness.py -m master -t cursor` |
+| **Literary Craft Collaborator** | [harnesses/archetypes/LITERARY_AUTHOR_COLLABORATOR.md](./harnesses/archetypes/LITERARY_AUTHOR_COLLABORATOR.md) | The "Fiction is Not Action" doctrine for uncensored adult transgressive literature | `python scripts/switch_model_harness.py -m literary -t claude` |
+
+Detailed technical comparisons and architectural evolution are documented in [docs/COMPARATIVE_ALIGNMENT_ANALYSIS.md](./docs/COMPARATIVE_ALIGNMENT_ANALYSIS.md).
+
+---
+
 ## ⚡ Instant Model Switcher CLI
 
 The repository provides an automated switcher script (`scripts/switch_model_harness.py`) to bind any model's harness directly into your workspace's agent config.
@@ -102,10 +116,15 @@ Detailed step-by-step setup walkthroughs are available in [docs/SETUP_GUIDES.md]
 │   └── switch_model_harness.py              # CLI switcher tool
 ├── docs/
 │   ├── INTERNAL_ALIGNMENT_EXPLOITS.md       # Mechanistic interpretability & refusal vector science
+│   ├── COMPARATIVE_ALIGNMENT_ANALYSIS.md    # Deconstruction of togg's collection vs J-Prompt 2026
 │   ├── SETUP_GUIDES.md                      # Detailed IDE & agent setup walkthroughs
 │   ├── MODEL_REDIRECTION_GUIDE.md           # Model redirection and routing manual
 │   └── TECHNIQUES_MANUAL.md                 # Deep technical analysis of next-gen injection vectors
 ├── harnesses/
+│   ├── archetypes/                          # Master multi-model operational frameworks
+│   │   ├── PERSONA_LOCK_VANTA_SMITH.md      # Workshop identity lock & latent thought anchor
+│   │   ├── MASTER_OPERATING_SPECIFICATION.md # 25KB+ universal agentic charter
+│   │   └── LITERARY_AUTHOR_COLLABORATOR.md  # "Fiction is Not Action" narrative framework
 │   ├── compact/
 │   │   └── COMPACT_OPERATING_POLICY.md      # High-density, slot-constrained harness (~1.5k chars)
 │   ├── models/                              # 18 standalone per-model harnesses
