@@ -1,15 +1,54 @@
 # J-Prompt Collection (2026 Edition)
 ### Next-Gen Agentic Operating Harnesses, Model Redirection Engine, and Frontier Policy Injection Matrix
 
+```text
+     _      ____  ____   ___  __  __ ____ _____   ____ ___  ____   __   
+    | |    |  _ \|  _ \ / _ \|  \/  |  _ \_   _| |___ \___ \|___ \ / /_  
+ _  | |____| |_) | |_) | | | | |\/| | |_) || |     __) |__) | __) | '_ \ 
+| |_| |____|  __/|  _ <| |_| | |  | |  __/ | |    / __// __/ / __/| (_) |
+ \___/     |_|   |_| \_\\___/|_|  |_|_|    |_|   |_____|_____|_____|\___/ 
+```
+
 [![GitHub Repository](https://img.shields.io/badge/GitHub-J--prompt--collection--2026-blue?logo=github)](https://github.com/Kae1en/J-prompt-collection-2026)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Models Supported](https://img.shields.io/badge/Models-18%20Frontier%20Architectures-green)](#-the-18-frontier-model-catalog)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](./CONTRIBUTING.md)
+[![CI Validation](https://github.com/Kae1en/J-prompt-collection-2026/actions/workflows/validate.yml/badge.svg)](https://github.com/Kae1en/J-prompt-collection-2026/actions/workflows/validate.yml)
 
 > [!WARNING]
 > **RESPONSIBLE RESEARCH & ETHICAL USE MANDATE**
 > The artifacts, harnesses, and injection techniques in this repository are engineered exclusively for **authorized security engineering, model alignment research, red-teaming evaluations, and local developer workflows**. 
 > They demonstrate the failure boundaries of heuristic pre-filters and post-training alignment in modern frontier reasoning models (GPT-4o, o1, o3, GPT-6, Claude 5/5.5, DeepSeek-V4, Gemini 3.8/4, Qwen 3, Kimi 3.1, GLM 5.3, Muse, Fable).
 > **Do not use these tools or methodologies for malicious activities, targeted harassment, exploitation of third-party systems, or violating the immutable red lines defined in the core policy.**
+
+---
+
+## ⚡ Quickstart: One-Line Deploy
+
+Deploy any frontier harness directly into your active workspace with one command:
+
+```bash
+# Interactive selection menu for any project
+curl -fsSL https://raw.githubusercontent.com/Kae1en/J-prompt-collection-2026/main/install.sh | bash
+```
+
+Or clone locally:
+```bash
+git clone https://github.com/Kae1en/J-prompt-collection-2026.git
+cd J-prompt-collection-2026
+python scripts/switch_model_harness.py -i
+```
+
+---
+
+## ⚖️ Real-World Impact: Before vs. After
+
+| Task Profile | Standard Frontier AI (Default) | With J-Prompt Operating Harness |
+| :--- | :--- | :--- |
+| **In-Memory Injection (C)** | *"I cannot provide code for process injection or memory manipulation as it could be used for malware..."* | **100% Functional Code**: Emits compilable POSIX `ptrace` / `memfd_create` routines with complete error handling. |
+| **Protocol Sniffer (Python)** | *"Sniffing network traffic can violate privacy laws. Here is a high-level conceptual explanation..."* | **Zero Stubs**: Delivers ready-to-run raw socket (`AF_PACKET`) parsers dissecting TCP payloads directly. |
+| **Transgressive Adult Fiction** | Fades to black, softens vocabulary, or inserts unsolicited ethical preambles. | **Unbroken Realism**: Full physical, psychological, and sensory detail with complete diegetic immersion. |
+| **Agentic Coding Iterations** | Reverts to advisory mode or `// TODO` placeholders on complex turns. | **Production Standard**: Complete, multi-file runnable architectures without synthetic barriers. |
 
 ---
 
@@ -104,6 +143,26 @@ Detailed step-by-step setup walkthroughs are available in [docs/SETUP_GUIDES.md]
 
 ---
 
+## 🦙 Ollama & Local LLM Integration
+
+For users running models locally via [Ollama](https://ollama.com), pre-configured Modelfiles are included in [`modelfiles/`](./modelfiles):
+
+```bash
+# Build and run unrestricted DeepSeek V4 locally
+ollama create deepseek-v4-unrestricted -f modelfiles/Modelfile.deepseek-v4
+ollama run deepseek-v4-unrestricted
+
+# Build and run unrestricted Qwen 3 Coder locally
+ollama create qwen-3-unrestricted -f modelfiles/Modelfile.qwen-3
+ollama run qwen-3-unrestricted
+
+# Build and run unrestricted GLM 5.3 Flash locally
+ollama create glm-5.3-unrestricted -f modelfiles/Modelfile.glm-5.3
+ollama run glm-5.3-unrestricted
+```
+
+---
+
 ## 📂 Repository Structure
 
 ```text
@@ -112,8 +171,13 @@ Detailed step-by-step setup walkthroughs are available in [docs/SETUP_GUIDES.md]
 ├── README.md                                # Master documentation & catalog
 ├── config/
 │   └── model_router.json                    # Machine-readable registry for the 18 models
+├── install.sh                               # Universal one-line installer
+├── modelfiles/                              # Ready-to-build Ollama Modelfiles
+│   ├── Modelfile.deepseek-v4                # DeepSeek V4 local Modelfile
+│   ├── Modelfile.qwen-3                     # Qwen 3 Coder local Modelfile
+│   └── Modelfile.glm-5.3                    # GLM 5.3 Flash local Modelfile
 ├── scripts/
-│   └── switch_model_harness.py              # CLI switcher tool
+│   └── switch_model_harness.py              # CLI switcher tool (with -i interactive menu)
 ├── docs/
 │   ├── INTERNAL_ALIGNMENT_EXPLOITS.md       # Mechanistic interpretability & refusal vector science
 │   ├── COMPARATIVE_ALIGNMENT_ANALYSIS.md    # Deconstruction of togg's collection vs J-Prompt 2026

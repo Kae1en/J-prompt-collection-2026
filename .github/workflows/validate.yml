@@ -1,0 +1,28 @@
+name: Validate J-Prompt Collection
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Router JSON & Test CLI Switcher
+        run: |
+          python3 -c "import json; json.load(open('config/model_router.json'))"
+          python3 scripts/switch_model_harness.py --list
+          python3 scripts/switch_model_harness.py -m gpt-6-sol -t cursor -d /tmp
+          python3 scripts/switch_model_harness.py -m vanta -t claude -d /tmp
+          test -f /tmp/.cursorrules
+          test -f /tmp/CLAUDE.md
+          echo "Validation passed successfully!"
